@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .close-btn{
+            width: 100px;
+            height: 80px;
+            background-color: tomato;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .close-btn span {
+            display: block;
+            background-color: cyan;
+            width: 80px;
+            height: 10px;
+            border-radius: 50px;
+        }
+        .close-btn:hover span:nth-child(1){
+            transition: ease 0.5s;
+            transform-origin: 0 0;
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="close-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label {
+            width: 100px;
+            height: 50px;
+            /* border: 1px solid; */
+            border-radius: 50px;
+            position: relative;
+            background-color: rgb(153, 153, 153);
+        }
+        label input {
+            visibility: hidden;
+        }
+        label input::after{
+            visibility: visible;
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color:#fff;
+            position: absolute;
+            border-radius: 50%;
+            left: 5px;
+            top: 5px;
+            transition: all 0.3s;
+        }
+        label input:checked::after{
+            transform: translateX(50px);
+
+        }
+        label input::before{
+            visibility: visible;
+            content: '';
+            width: 100px;
+            height: 50px;
+            /* background-color: cyan; */
+            position: absolute;
+            border-radius: 50px;
+            top: 0;
+            left: 0;
+            transition: all 0.3s;
+        }
+        label input:checked::before{
+            background-color: rgb(74, 139, 238);
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox" class="checkbox" name="开关">
+    </label>
+</body>
+</html>
