@@ -1,93 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./iconFont/iconfont.css">
+    <link rel="stylesheet" href="./iconFont/iconfont.css" />
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        body{
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        label {
-            position: relative;
-            width: 100px;
-            height: 50px;
-            background-color: rgb(153, 153, 153);
-            /* 蓝色 */
-            /* background-color: rgb(74, 139, 238); */
-            border-radius: 50px;
-        }
-        label input {
-            visibility: hidden;
-        }
-        label span{
-            display: block;
-            width: 40px;
-            height: 40px;
-            background-color: #fff;
-            position: absolute;
-            border-radius: 50%;
-            top: 5px;
-            left: 5px;
-            transition: all 0.3s;
-        }
-        label input::after{
-            visibility: visible;
-            content: '';
-            width: 100px;
-            height: 50px;
-            /* background-color: cyan; */
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-        label input:checked::after{
-            background-color: rgb(74, 139, 238);
-        }
-        
-        label input:checked + span{
-            transform: translateX(50px);
-        }
-        label input:checked + span .icon-duihao {
-            visibility: visible;
-            color: rgb(74, 139, 238);
-        }
-        label input:checked + span .icon-cha- {
-            visibility: hidden;
-        }
-        label span .icon-duihao {
-            visibility: hidden;
-        }
-        label span i {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            font-weight: bold;
-            /* font-size: ; */
-            transform: scale(1.3);
-            color: rgb(153, 153, 153);
-        }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      label {
+        position: relative;
+        width: 100px;
+        height: 50px;
+        background-color: rgb(153, 153, 153);
+        /* 蓝色 */
+        /* background-color: rgb(74, 139, 238); */
+        border-radius: 50px;
+      }
+      label input {
+        visibility: hidden;
+      }
+      label span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 50%;
+        top: 5px;
+        left: 5px;
+        transition: all 0.3s;
+      }
+      label input::after {
+        visibility: visible;
+        content: "";
+        width: 100px;
+        height: 50px;
+        /* background-color: cyan; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50px;
+        transition: all 0.3s;
+      }
+      label input:checked::after {
+        background-color: rgb(74, 139, 238);
+      }
+
+      label input:checked + span {
+        transform: translateX(50px);
+      }
+      label input:checked + span .icon-duihao {
+        visibility: visible;
+        color: rgb(74, 139, 238);
+      }
+      label input:checked + span .icon-cha- {
+        visibility: hidden;
+      }
+      label span .icon-duihao {
+        visibility: hidden;
+      }
+      label span i {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-weight: bold;
+        /* font-size: ; */
+        transform: scale(1.3);
+        color: rgb(153, 153, 153);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <label>
-        <input type="checkbox" class="checkbox">
-        <span>
-            <i class="iconfont icon-duihao"></i>
-            <i class="iconfont icon-cha-"></i>
-        </span>
-        
-        
+      <input type="checkbox" class="checkbox" />
+      <span>
+        <i class="iconfont icon-duihao"></i>
+        <i class="iconfont icon-cha-"></i>
+      </span>
     </label>
-</body>
+    <script type="text/javascript">
+      var switchBtn = document.querySelector(".checkbox");
+
+      switchBtn.onchange = function () {
+        if (switchBtn.checked) {
+          document.body.style.backgroundColor = "#050505";
+        } else {
+          document.body.style.backgroundColor = "#ffffff";
+        }
+      };
+    </script>
+  </body>
 </html>
